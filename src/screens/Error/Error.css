@@ -1,0 +1,49 @@
+.error {
+    font-size: xx-large !important;
+}
+
+.c1voot80[class][class] {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.c1voot80[class][class] {
+    display: flex;
+    flex-direction: column;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*-ms-flex: 0 1 auto;*/
+}
+
+div {
+    display: block;
+}
+
+._is5jnq {
+    --page-shell-max-content-width: 1440px !important;
+}
+
+.style1 {
+    --dls-liteimage-height:240px;
+    --dls-liteimage-width:240px;
+    --dls-liteimage-background-image:url('data:image/png;base64,null');
+    --dls-liteimage-background-size:contain;
+}
+
+.style2 {
+    --dls-liteimage-object-fit:contain;
+}
+
+.style3 {
+    --dls-liteimage-background-size:contain;
+    --dls-liteimage-background-image:url(https://a0.muscache.com/airbnb/static/error_pages/404-Airbnb_final-d652ff855b1335dd3eedc3baa8dc8b69.gif);
+}
+
+.containerE {
+    margin-left: 2%;
+}
