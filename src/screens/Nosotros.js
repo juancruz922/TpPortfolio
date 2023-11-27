@@ -1,8 +1,8 @@
 import Cv from "../components/Cv";
 
-const Nosotros = ({}) => {
+const Nosotros = () => {
     return(
-    <Cv nombre="Juan Cruz Grinceri" nivelSql="Avanzado" aptitudes={["Creatividad", "Microsoft Office", "GitHub"]} lenguajes={["HTML", "JavaScript", "React", "ReactNative"]}></Cv>
+    <Cv nombre="Juan Cruz Grinceri"></Cv>
     )
 }
 

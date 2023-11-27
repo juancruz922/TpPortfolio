@@ -55,12 +55,12 @@ const Layout = () => {
                     <div className="col-auto">
                         <p className="text-center"></p>
                         <div className="d-flex justify-content-center fs-2 gap-4 footer-links">
-                        {/* Puedes agregar más enlaces o elementos según sea necesario */}
+                    
                         </div>
                     </div>
                     <div className="col-auto">
                         <div className="d-flex justify-content-center fs-2 gap-4 footer-links">
-                        {/* Puedes agregar más enlaces o elementos según sea necesario */}
+                
                         </div>
                     </div>
                     </div>

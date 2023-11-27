@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Creacion = ({ creacion, screen = "Creaciones" }) => {
   return (
     <div className="card" style={styles.card}>
@@ -7,7 +6,7 @@ const Creacion = ({ creacion, screen = "Creaciones" }) => {
         <h5 className="card-title" style={styles.cardTitle}>
           {creacion.Titulo}
         </h5>
-        {screen === "Home" ? "" : <button type="button" className="btn btn-info" data-bs-toggle="modal" data-bs-target={"#exampleModal" + creacion.Id}>Descubrir más</button>}
+        {screen === "Home" ? "" : <button type="button" className="btn btn-info" data-bs-toggle="modal" data-bs-target={"#exampleModal" + creacion.Id}>ver más</button>}
       </div>
     </div>
   );

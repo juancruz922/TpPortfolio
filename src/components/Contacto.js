@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [userName, setUserName] = useState('');
 
@@ -15,15 +15,15 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     const enteredUserName = e.target.elements.userName.value;
-
+  
     setLoggedIn(true);
     setUserName(enteredUserName);
-
     localStorage.setItem('userName', enteredUserName);
+
+    onLogin();
   };
 
   const handleLogout = () => {
-    
     setLoggedIn(false);
     setUserName('');
     localStorage.removeItem('userName');

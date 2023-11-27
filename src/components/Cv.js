@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cv = ({ nombre, titulacion, certificado, nivelSql, aptitudes, lenguajes }) => {
+const Cv = ({ nombre }) => {
   return (
     <div className="container px-5 my-5">
       <div className="text-center mb-5">
