@@ -7,7 +7,8 @@ const ModalCreacion = ({ creacion }) => {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
 
   const handleAgregarFavoritos = () => {
-    if (isUserLoggedIn) {
+     const storedUserName = localStorage.getItem('userName');
+    if (storedUserName) {
       favorito.favorito.find((c) => c.Id === creacion.Id)
         ? favorito.setFavorito(favorito.favorito.filter((c) => c !== creacion))
         : favorito.setFavorito([...favorito.favorito, creacion]);
@@ -37,7 +38,7 @@ const ModalCreacion = ({ creacion }) => {
           </div>
         </div>
       </div>
-      {/* Renderiza el componente Login en el modal y pasa la función onLogin */}
+      {}
       <Login onLogin={() => setIsUserLoggedIn(true)} />
     </div>
   );
