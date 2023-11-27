@@ -7,13 +7,13 @@ import Creacion from '../components/Creacion';
 import axios from 'axios';
 
 const Home = () => {
-    const [creaciones, setCreaciones] = React.useState([]);
+    const [setCreaciones] = React.useState([]);
 
     const getCreaciones = () => axios.get('http://localhost:3000/creaciones.json').then(res => setCreaciones(res.data)).catch(error => console.log(error));
 
     React.useEffect(() => {
         getCreaciones();
-    }, []);
+    }, );
 
     return (
         <main className="flex-shrink-0" style={styles.main}>

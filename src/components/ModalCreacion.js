@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import FavoritoContext from '../context/favoritoContext';
 
+
 const ModalCreacion = ({ creacion }) => {
   const favorito = useContext(FavoritoContext);
 
@@ -13,7 +14,14 @@ const ModalCreacion = ({ creacion }) => {
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div className="modal-body">
+
             <p className="text-primary">{creacion.FechaInicio} - {creacion.FechaFin}</p>
+            <img src={creacion.Imagen} alt={creacion.Titulo} style={{ 
+                maxWidth: '100%',  
+                maxHeight: '300px',  
+                height: 'auto'  
+              }}  />
+
             <p>{creacion.Descripcion}</p>
           </div>
           <div className="modal-footer">
@@ -29,7 +37,7 @@ const ModalCreacion = ({ creacion }) => {
 
 const styles = {
   modalContent: {
-    backgroundColor: '#f0f8ff', // Color de fondo aliceblue
+    backgroundColor: '#f0f8ff', 
     borderRadius: '15px',
     boxShadow: '0',
   }

@@ -3,7 +3,7 @@
         "Id": 1,
         "Titulo": "Tp Personajes",
         "Descripcion": "Una aplicación para encontrar información sobre los personajes más icónicos de la historia y explorar sus biografías, logros y legados en la sociedad.",
-        "Imagen": "",
+        "Imagen": "personajes.jpg",
         "FechaInicio": "mar. 2023",
         "FechaFin": "actualidad"
     },
@@ -11,16 +11,16 @@
     {
         "Id": 3,
         "Titulo": "Eco Heroes",
-        "Descripcion": "Una red social especialmente diseñada para conectar a las personas apasionadas por la protección del medio ambiente y compartir consejos, historias y acciones para un planeta más sostenible.",
-        "Imagen": "",
+        "Descripcion": "Una pagina de donaciones especialmente diseñada para conectar a las personas apasionadas por la protección del medio ambiente y colaborar para ayudar a las victimas de desastres naturales",
+        "Imagen": "eco.jpg",
         "FechaInicio": "oct. 2022",
         "FechaFin": "nov. 2022"
     },
     {
         "Id": 4,
         "Titulo": "BliotecaORT",
-        "Descripcion": "Intercambio de libros entre estudiantes de la ORT.",
-        "Imagen": "",
+        "Descripcion": "Intercambio de libros entre estudiantes de ORT.",
+        "Imagen": "ort.jpg",   
         "FechaInicio": "jul. 2023",
         "FechaFin": "sep. 2023"
     }

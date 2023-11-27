@@ -17,8 +17,8 @@ const styles = {
   card: {
     width: 500,
     maxHeight: 650,
-    backgroundColor: '#ffcccb', // Fondo color melocotón claro
-    borderColor: '#ff6666', // Borde color coral
+    backgroundColor: '#ffcccb', 
+    borderColor: '#ff6666', 
     borderRadius: '15px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
     marginBottom: '20px',
@@ -30,7 +30,7 @@ const styles = {
     alignItems: 'center',
   },
   starIcon: {
-    color: '#ff6666', // Icono de estrella color coral
+    color: '#ff6666', 
     marginLeft: '5px',
   },
 };

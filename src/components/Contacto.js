@@ -1,29 +1,75 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Contacto = () => {
+const Login = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    const storedUserName = localStorage.getItem('userName');
+    if (storedUserName) {
+      setLoggedIn(true);
+      setUserName(storedUserName);
+    }
+  }, []); 
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const enteredUserName = e.target.elements.userName.value;
+
+    setLoggedIn(true);
+    setUserName(enteredUserName);
+
+    localStorage.setItem('userName', enteredUserName);
+  };
+
+  const handleLogout = () => {
+    
+    setLoggedIn(false);
+    setUserName('');
+    localStorage.removeItem('userName');
+  };
+
   return (
-    <div className="contact-form" style={styles.contactForm}>
-      <form>
-        <h2 style={styles.heading}>Contacto</h2>
-        <div className="form-group" style={styles.formGroup}>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo Electrónico" style={styles.input} />
+    <div className="login-form" style={styles.loginForm}>
+      {loggedIn ? (
+        <div style={styles.welcomeMessage}>
+          <h2>Bienvenido, {userName}!</h2>
+          <button onClick={handleLogout} className="btn btn-danger" style={styles.button}>
+            Cerrar Sesión
+          </button>
         </div>
-        <div className="form-group" style={styles.formGroup}>
-          <input type="text" className="form-control" id="exampleInputText1" placeholder="Nombre Completo" style={styles.input} />
-        </div>
-        <div className="form-group" style={styles.formGroup}>
-          <textarea className="form-control" rows="5" placeholder="Mensaje" style={styles.textarea}></textarea>
-        </div>
-        <button type="submit" className="btn btn-primary" style={styles.button}>Enviar</button>
-      </form>
+      ) : (
+        <form onSubmit={handleLogin}>
+          <h2 style={styles.heading}>Iniciar Sesión</h2>
+          <div className="form-group" style={styles.formGroup}>
+            <input
+              type="text"
+              className="form-control"
+              id="userName"
+              placeholder="Nombre de Usuario"
+              style={styles.input}
+            />
+          </div>
+          <div className="form-group" style={styles.formGroup}>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="Contraseña"
+              style={styles.input}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary" style={styles.button}>
+            Iniciar Sesión
+          </button>
+        </form>
+      )}
     </div>
   );
-}
-
-
+};
 
 const styles = {
-  contactForm: {
+  loginForm: {
     maxWidth: '400px',
     margin: '0 auto',
     padding: '20px',
@@ -46,21 +92,18 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: '5px',
   },
-  textarea: {
-    width: '100%',
-    padding: '10px',
-    border: '1px solid #ccc',
-    borderRadius: '5px',
-    resize: 'vertical',
-  },
   button: {
-    backgroundColor: '#007bff',
-    color: '#fff',
-    border: 'none',
+    margin: '10px 0',
     borderRadius: '5px',
     padding: '10px 20px',
     cursor: 'pointer',
   },
+  welcomeMessage: {
+    textAlign: 'center',
+    color: '#333',
+    fontSize: '24px',
+    marginTop: '20px',
+  },
 };
 
-export default Contacto;
+export default Login;

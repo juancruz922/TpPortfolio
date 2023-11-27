@@ -5,18 +5,21 @@ import FavoritoContext from "../context/favoritoContext";
 
 const Favoritos = () => {
   const [creaciones, setCreaciones] = useState([]);
-  const favorito = useContext(FavoritoContext);
+  const favoritoContext = useContext(FavoritoContext);
 
-  const getCreaciones = () => axios.get('http://localhost:3000/creaciones.json').then(res => setCreaciones(res.data)).catch(error => console.log(error));
+  const getCreaciones = () => axios.get('http://localhost:3000/creaciones.json')
+    .then(res => setCreaciones(res.data))
+    .catch(error => console.log(error));
 
   useEffect(() => {
     getCreaciones();
   }, []);
 
+
   return (
     <div className="container" style={styles.container}>
       <div className="row justify-content-center" style={styles.row}>
-        {creaciones.map(creacion => favorito.favorito.find((c) => c.Id === creacion.Id) ? (
+        {creaciones.map(creacion => favoritoContext.favorito.find((c) => c.Id === creacion.Id) ? (
           <div key={creacion.Id} className="col-4" style={styles.col}>
             <Creacion creacion={creacion} />
           </div>
